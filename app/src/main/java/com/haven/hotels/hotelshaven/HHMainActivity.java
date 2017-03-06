@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -14,7 +15,8 @@ public class HHMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hhmain);
+        setContentView(R.layout.android_zoomin_animation);
+    }
 
 //        ImageView image=(ImageView)findViewById(R.id.imageView1);
 //
@@ -31,19 +33,29 @@ public class HHMainActivity extends AppCompatActivity {
 //        // Later. if you want to  stop the animation
 //        image.setAnimation(null);
 
-        ((ViewSwitcher) findViewById(R.id.switcher)).setOnClickListener(new View.OnClickListener() {
+//        ((ViewSwitcher) findViewById(R.id.switcher)).setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                ViewSwitcher switcher = (ViewSwitcher) v;
+//
+//                if (switcher.getDisplayedChild() == 0) {
+//                    switcher.showNext();
+//                } else {
+//                    switcher.showPrevious();
+//                }
+//            }
+//        });
 
-            @Override
-            public void onClick(View v) {
-                ViewSwitcher switcher = (ViewSwitcher) v;
+        public void startZoomInAnimation(View view) {
+            ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
-                if (switcher.getDisplayedChild() == 0) {
-                    switcher.showNext();
-                } else {
-                    switcher.showPrevious();
-                }
-            }
-        });
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in_animation);
+            imageView.startAnimation(animation);
 
-    }
+//            Animation zoomOutAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_out_animation);
+//            imageView.startAnimation(zoomOutAnimation);
+        }
+
+
 }
