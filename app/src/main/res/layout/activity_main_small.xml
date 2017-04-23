@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Linear layout start here -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pool"
+    android:fadingEdge="horizontal"
+    android:orientation="vertical"
+    tools:context="com.haven.hotels.hotelshaven.activities.MainActivity">
+
+    <!-- Text view for Hotels Haven Text -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/logo"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:src="@drawable/tlogo44"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="0dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+
+    <!-- Textview for Destination text -->
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:text="@string/destinationText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:typeface="serif" />
+
+    <!-- Edit text for entering destination with hint -->
+    <EditText
+        android:id="@+id/destinationedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/destinationPlaceholderText"
+        android:textColorHint="@android:color/white"
+        android:ems="10"
+        android:fadingEdgeLength="10dp"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textAlignment="center" >
+        <requestFocus />
+    </EditText>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/checkinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/checkInDate"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/checkoutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:text="@string/checkOutDate"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:textSize="14dp" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp" >
+
+            <EditText
+                android:id="@+id/checkinDate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/checkoutDate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textAlignment="center"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:layout_marginLeft="28dp" />
+
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/adultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="@string/adultGuest"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/childrenText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/childrenGuest"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/roomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="@string/roomDropdown"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
+                android:typeface="serif"
+                android:textSize="14dp" />
+
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp">
+
+            <Spinner
+                android:id="@+id/adultSpinner"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:entries="@array/adultGuestArray" />
+
+            <Spinner
+                android:id="@+id/childrenSpinner"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:entries="@array/childrenGuestArray" />
+
+            <Spinner
+                android:id="@+id/roomSpinner"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="37dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:entries="@array/roomArray" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Button for calculating the formula, when pressed, with calculate written over it -->
+    <Button
+        android:id="@+id/findhotels"
+        android:layout_width="158dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:fadingEdge="vertical"
+        android:longClickable="true"
+        android:nextFocusRight="@android:color/holo_blue_dark"
+        android:text="@string/submitButton"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+    <!-- Text view for showing result -->
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="14dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"/>
+
+</LinearLayout>
+    <!-- Linear layout ends here -->

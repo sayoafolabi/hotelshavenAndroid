@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -62,7 +63,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Configuration config = getResources().getConfiguration();
+
+        if(config.smallestScreenWidthDp <= 320)
+        {
+            setContentView(R.layout.activity_main_small);
+        }
+        else
+        {
+            setContentView(R.layout.activity_main);
+        }
+
 
         dateFormatter = new SimpleDateFormat("dd MMM yy", Locale.ENGLISH);
         dateFormatterUrl = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
