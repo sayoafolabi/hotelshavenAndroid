@@ -97,7 +97,7 @@
                 android:id="@+id/checkoutText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="28dp"
                 android:text="@string/checkOutDate"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
@@ -124,10 +124,11 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:ems="10"
+                android:ems="5"
+                style="?android:attr/spinnerStyle"
                 android:textColor="@color/white"
                 android:textSize="14dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
                 android:textAlignment="center" />
@@ -137,13 +138,14 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:ems="10"
+                android:ems="5"
+                style="?android:attr/spinnerStyle"
                 android:textColor="@color/white"
                 android:textSize="14dp"
                 android:textAlignment="center"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:layout_marginLeft="28dp" />
+                android:layout_marginLeft="15dp" />
 
         </TableRow>
     </TableLayout>
@@ -188,7 +190,7 @@
                 android:id="@+id/roomText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="30dp"
                 android:text="@string/roomDropdown"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
@@ -213,29 +215,17 @@
 
             <Spinner
                 android:id="@+id/adultSpinner"
-                android:layout_width="40dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
+                style="@style/spinner_small"
                 android:entries="@array/adultGuestArray" />
 
             <Spinner
                 android:id="@+id/childrenSpinner"
-                android:layout_width="40dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="32dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
+                style="@style/spinner_small_child"
                 android:entries="@array/childrenGuestArray" />
 
             <Spinner
                 android:id="@+id/roomSpinner"
-                android:layout_width="40dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="37dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
+                style="@style/spinner_small_room"
                 android:entries="@array/roomArray" />
         </TableRow>
     </TableLayout>
@@ -244,7 +234,7 @@
     <Button
         android:id="@+id/findhotels"
         android:layout_width="210dp"
-        android:layout_height="51dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:fadingEdge="vertical"
@@ -252,7 +242,7 @@
         android:nextFocusRight="@android:color/holo_blue_dark"
         android:text="@string/submitButton"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:background="@android:color/holo_blue_dark"
         android:textColor="@color/white"
         android:visibility="visible" />
