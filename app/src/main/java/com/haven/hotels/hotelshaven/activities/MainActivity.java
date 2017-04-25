@@ -69,7 +69,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             setContentView(R.layout.activity_main_small);
         }
-        else if((config.smallestScreenWidthDp > 320) && (config.smallestScreenWidthDp <= 598))
+        else if((config.smallestScreenWidthDp > 320) && (config.smallestScreenWidthDp <= 410))
+        {
+            setContentView(R.layout.activity_main_360);
+        }
+        else if((config.smallestScreenWidthDp > 410) && (config.smallestScreenWidthDp <= 598))
         {
             setContentView(R.layout.activity_main);
         }
