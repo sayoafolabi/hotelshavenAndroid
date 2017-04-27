@@ -32,7 +32,7 @@
         android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
-        android:textSize="50sp"
+        android:textSize="55sp"
         android:textStyle="bold"
         android:typeface="sans" />
 
@@ -47,6 +47,7 @@
         android:text="@string/destinationText"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white"
+        android:textSize="20sp"
         android:textStyle="bold|italic"
         android:typeface="serif" />
 
@@ -85,25 +86,25 @@
                 android:id="@+id/checkinText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="60dp"
                 android:text="@string/checkInDate"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/checkoutText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="85dp"
+                android:layout_marginLeft="40dp"
                 android:text="@string/checkOutDate"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
         </TableRow>
     </TableLayout>
     <TableLayout
@@ -127,7 +128,8 @@
                 android:ems="10"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:layout_marginLeft="35dp"
+                style="?android:attr/spinnerStyle"
+                android:layout_marginLeft="55dp"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
                 android:textAlignment="center" />
@@ -141,9 +143,10 @@
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textAlignment="center"
+                style="?android:attr/spinnerStyle"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:layout_marginLeft="48dp" />
+                android:layout_marginLeft="25dp" />
 
         </TableRow>
     </TableLayout>
@@ -164,37 +167,37 @@
                 android:id="@+id/adultText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="83dp"
                 android:text="@string/adultGuest"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/childrenText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="115dp"
+                android:layout_marginLeft="60dp"
                 android:text="@string/childrenGuest"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/roomText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_marginLeft="60dp"
                 android:text="@string/roomDropdown"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
 
         </TableRow>
     </TableLayout>
@@ -213,29 +216,17 @@
 
             <Spinner
                 android:id="@+id/adultSpinner"
-                android:layout_width="50dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="50dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
+                style="@style/spinner_seven"
                 android:entries="@array/adultGuestArray" />
 
             <Spinner
                 android:id="@+id/childrenSpinner"
-                android:layout_width="50dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="42dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
+                style="@style/spinner_seven_child"
                 android:entries="@array/childrenGuestArray" />
 
             <Spinner
                 android:id="@+id/roomSpinner"
-                android:layout_width="50dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="37dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
+                style="@style/spinner_seven_room"
                 android:entries="@array/roomArray" />
         </TableRow>
     </TableLayout>
@@ -262,12 +253,45 @@
         android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="20dp"
-        android:text=""
-        android:textSize="20dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="Our Partners:"
+        android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@android:color/holo_orange_dark"/>
+        android:textColor="@android:color/darker_gray"/>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/lateroomsPartner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/rsz_lateroom" />
+
+        <ImageView
+            android:id="@+id/bookingPartner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="200dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/rsz_hotelscombo" />
+
+        <ImageView
+            android:id="@+id/hotelscombinedPartner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/rsz_bookinglogo" />
+    </RelativeLayout>
 </LinearLayout>
     <!-- Linear layout ends here -->
