@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String destinationText, checkinText, checkoutText, adultText,
             childrenText, roomText, url, nights, urlCheckin, cinText, coutText, providerChosen;
     private Date userCheckinDate, userCheckOutDate;
-    ImageView bookingImage, hotelscombinedImage, lateroomsImage;
+    ImageView bookingImage, hotelscombinedImage, lateroomsImage, bookingImage10, hotelscombinedImage10, lateroomsImage10;
 
 
     private SimpleDateFormat dateFormatter, dateFormatterUrl, dateFormat;
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onClick(View view) {
 
-                    url = "https://www.booking.com/dealspage.en-gb.html";
+                    url = "https://www.booking.com/dealspage.en-gb.html?aid=808677";
                     storedValues.store("url", url);
                     providerChosen = "Booking.com";
                     storedValues.store("provider", providerChosen);
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onClick(View view) {
 
-                    url = "https://www.laterooms.com/en/deals";
+                    url = "https://www.laterooms.com/en/p16107/deals";
                     storedValues.store("url", url);
                     providerChosen = "Laterooms.com";
                     storedValues.store("provider", providerChosen);
@@ -191,6 +191,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
 
             hotelscombinedImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    url = "https://www.hotelscombined.com/HottestDeals?a_aid=159705";
+                    storedValues.store("url", url);
+                    providerChosen = "Hotelscombined.com";
+                    storedValues.store("provider", providerChosen);
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        if((config.smallestScreenWidthDp > 758))
+        {
+            bookingImage10 = (ImageView) findViewById(R.id.bookingPartner10);
+            lateroomsImage10 = (ImageView) findViewById(R.id.lateroomsPartner10);
+            hotelscombinedImage10 = (ImageView) findViewById(R.id.hotelscombinedPartner10);
+
+            bookingImage10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    url = "https://www.booking.com/dealspage.en-gb.html?aid=808677";
+                    storedValues.store("url", url);
+                    providerChosen = "Booking.com";
+                    storedValues.store("provider", providerChosen);
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            lateroomsImage10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    url = "https://www.laterooms.com/en/p16107/deals";
+                    storedValues.store("url", url);
+                    providerChosen = "Laterooms.com";
+                    storedValues.store("provider", providerChosen);
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            hotelscombinedImage10.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 

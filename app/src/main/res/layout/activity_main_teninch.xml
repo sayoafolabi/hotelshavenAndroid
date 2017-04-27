@@ -98,7 +98,7 @@
                 android:id="@+id/checkoutText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="60dp"
                 android:text="@string/checkOutDate"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
@@ -128,7 +128,8 @@
                 android:ems="20"
                 android:textColor="@color/white"
                 android:textSize="25dp"
-                android:layout_marginLeft="75dp"
+                style="?android:attr/spinnerStyle"
+                android:layout_marginLeft="80dp"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
                 android:textAlignment="center" />
@@ -139,12 +140,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="20"
+                style="?android:attr/spinnerStyle"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 android:textAlignment="center"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
-                android:layout_marginLeft="98dp" />
+                android:layout_marginLeft="85dp" />
 
         </TableRow>
     </TableLayout>
@@ -165,7 +167,7 @@
                 android:id="@+id/adultText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="70dp"
                 android:text="@string/adultGuest"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
@@ -177,7 +179,7 @@
                 android:id="@+id/childrenText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="115dp"
+                android:layout_marginLeft="85dp"
                 android:text="@string/childrenGuest"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
@@ -189,7 +191,7 @@
                 android:id="@+id/roomText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_marginLeft="90dp"
                 android:text="@string/roomDropdown"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white"
@@ -214,29 +216,17 @@
 
             <Spinner
                 android:id="@+id/adultSpinner"
-                android:layout_width="50dp"
-                android:layout_height="55dp"
-                android:layout_marginRight="50dp"
-                android:layout_weight="2"
-                android:background="@android:color/white"
+                style="@style/spinner_ten"
                 android:entries="@array/adultGuestArray" />
 
             <Spinner
                 android:id="@+id/childrenSpinner"
-                android:layout_width="50dp"
-                android:layout_height="55dp"
-                android:layout_marginRight="42dp"
-                android:layout_weight="2"
-                android:background="@android:color/white"
+                style="@style/spinner_ten_child"
                 android:entries="@array/childrenGuestArray" />
 
             <Spinner
                 android:id="@+id/roomSpinner"
-                android:layout_width="50dp"
-                android:layout_height="55dp"
-                android:layout_marginRight="37dp"
-                android:layout_weight="2"
-                android:background="@android:color/white"
+                style="@style/spinner_ten_room"
                 android:entries="@array/roomArray" />
         </TableRow>
     </TableLayout>
@@ -263,12 +253,46 @@
         android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="20dp"
-        android:text=""
-        android:textSize="20dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="Our Partners' hot deals:"
+        android:textSize="35dp"
         android:textStyle="bold"
-        android:textColor="@android:color/holo_orange_dark"/>
+        android:textColor="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/lateroomsPartner10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/rsz_lateroom" />
+
+        <ImageView
+            android:id="@+id/bookingPartner10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="250dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/rsz_bookinglogo" />
+
+        <ImageView
+            android:id="@+id/hotelscombinedPartner10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/rsz_hotelscombo" />
+    </RelativeLayout>
 
 </LinearLayout>
     <!-- Linear layout ends here -->

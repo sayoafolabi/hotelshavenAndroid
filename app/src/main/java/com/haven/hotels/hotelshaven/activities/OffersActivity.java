@@ -25,10 +25,7 @@ public class OffersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_offers);
 
 
-        url = "www.laterooms.com/en/deals";
-        provider = "Laterooms";
-        storedValues.store("DealUrl", url);
-        storedValues.store("DealProvider", provider);
+
 
         hImageView = (ImageView) findViewById(R.id.imageViewhcl);
         lImageView = (ImageView) findViewById(R.id.imageViewlrl);
@@ -40,7 +37,12 @@ public class OffersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(context, OfferWebViewActivity.class);
+                url = "www.laterooms.com/en/deals";
+                provider = "Laterooms";
+                storedValues.store("DealUrl", url);
+                storedValues.store("DealProvider", provider);
+
+                Intent intent = new Intent(context, WebViewActivity.class);
                 startActivity(intent);
 
             }
