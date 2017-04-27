@@ -257,7 +257,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:paddingTop="10dp"
-        android:text="Our Partners:"
+        android:text="Our Partners' hot deals:"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="@android:color/darker_gray"/>
@@ -282,7 +282,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="200dp"
             android:paddingTop="5dp"
-            android:src="@drawable/rsz_hotelscombo" />
+            android:src="@drawable/rsz_bookinglogo" />
 
         <ImageView
             android:id="@+id/hotelscombinedPartner"
@@ -291,7 +291,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginRight="10dp"
             android:paddingTop="5dp"
-            android:src="@drawable/rsz_bookinglogo" />
+            android:src="@drawable/rsz_hotelscombo" />
     </RelativeLayout>
 </LinearLayout>
     <!-- Linear layout ends here -->
