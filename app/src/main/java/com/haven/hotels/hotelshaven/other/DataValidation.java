@@ -1,5 +1,6 @@
 package com.haven.hotels.hotelshaven.other;
 
+import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -99,7 +100,12 @@ public class DataValidation
 
     public Date convertStringToDate(String dateString)
     {
-        dateFormat = new SimpleDateFormat("dd MMM yy", Locale.ENGLISH);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy");
+        String year = dateFormat.format(new Date());
+
+        dateString = dateString + " " + year;
+
+        dateFormat = new SimpleDateFormat("dd MMM yyyy", Locale.ENGLISH);
 
         try
         {

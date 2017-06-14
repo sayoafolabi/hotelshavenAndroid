@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Linear layout start here -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -122,21 +128,21 @@
 
             <EditText
                 android:id="@+id/checkinDate"
-                android:layout_width="140dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="20"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 style="?android:attr/spinnerStyle"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="75dp"
                 android:textStyle="bold|italic"
                 android:typeface="serif"
                 android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/checkoutDate"
-                android:layout_width="140dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="20"
@@ -295,4 +301,5 @@
     </RelativeLayout>
 
 </LinearLayout>
+</ScrollView>
     <!-- Linear layout ends here -->

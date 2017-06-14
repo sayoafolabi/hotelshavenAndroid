@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        dateFormatter = new SimpleDateFormat("dd MMM yy", Locale.ENGLISH);
+        dateFormatter = new SimpleDateFormat("dd MMM", Locale.ENGLISH);
         dateFormatterUrl = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
         dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
 

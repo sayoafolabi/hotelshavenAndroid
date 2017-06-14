@@ -20,7 +20,7 @@ public class ProvidersUrl
 
         String first, second, third, fourth, five, sixth, seventh;
 
-        first = "https://www.hotelscombined.com/Hotels/Search?a_aid=159705&destination=place%3A";
+        first = "https://www.hotelscombined.com/Hotels/Search?a_aid=159705&brandid=481068&languageCode=EN&destination=place%3A";
 
         second = destination + "&radius=30mi&";
 
@@ -46,7 +46,7 @@ public class ProvidersUrl
             destination = destination.replace(" ", "_");
         }
 
-        hotelsCombined = "https://www.hotelscombined.com/Hotels/Search?a_aid=159705&" +
+        hotelsCombined = "https://www.hotelscombined.com/?a_aid=159705&brandid=481068&languageCode=EN/Hotels/Search?a_aid=159705&" +
                 "destination=place%3A%s&radius=30mi&" +
                 "checkin=%s&" +
                 "checkout=%s&" +
